@@ -1,0 +1,19 @@
+.wp-block {
+    max-width: 100%;
+	padding:0 30px;
+}
+​
+ul {
+	padding-left:0;
+	margin-left:0;
+}
+​
+/* Width of "wide" blocks */
+.wp-block[data-align="wide"] {
+    max-width: 1080px;
+}
+​
+/* Width of "full-wide" blocks */
+.wp-block[data-align="full"] {
+    max-width: none;
+}

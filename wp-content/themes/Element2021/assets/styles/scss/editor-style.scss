@@ -1,0 +1,51 @@
+/******************************************************************
+
+Stylesheet: Main Editor Stylesheet
+
+Here is where you import
+all the Sass files you need on the backend
+so they can compile into one
+CSS file used by the editor.
+
+******************************************************************/
+
+// Import local Foundation overrides - Don't link to Bower version as it will be overwritten whenever updated
+@import "settings";
+
+// Import foundation.scss from vendor files
+@import "../../../node_modules/foundation-sites/scss/foundation";
+
+// Import Motion-UI from vendor files
+@import "../../../node_modules/motion-ui/src/motion-ui";
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+// Select the components you want to use
+//@include foundation-global-styles;
+
+@include foundation-grid;
+@include foundation-flex-grid;
+@include foundation-xy-grid-classes;
+@include foundation-flex-classes;
+@include foundation-typography;
+@include foundation-accordion;
+@include foundation-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-float-classes;
+@include foundation-visibility-classes;
+
+// Import Slick
+//@import "../../../node_modules/slick-carousel/slick/slick.scss";
+//@import "slick-theme.scss";
+
+// Import your custom styles
+@import "global";
+@import "style-editor";
+
+//factapress
+@import "factapress";
+
+ @import "home";
+
+ 

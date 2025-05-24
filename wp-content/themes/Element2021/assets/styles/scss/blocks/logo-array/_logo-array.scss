@@ -1,0 +1,105 @@
+.padded-wrap {
+	width:100%;
+	padding:80px 40px;
+	border-bottom:1px solid #939393;
+	}
+.padded-wrap.logo-2 {
+	background:$dark-gray;
+	color:#fff;
+	}
+.logo-array {
+	width:100%;
+	max-width:1280px;
+	margin:0 auto;
+	}
+.padded-wrap.offset-1 {
+	padding:50px 0 50px 60px;
+	border-bottom:0;
+	}
+.logo-array h2 {
+	text-transform:uppercase;
+	color:$brand-orange;
+	}
+.logo-ticker.splide .splide__slide img {
+	width: 100%;
+	height: auto;
+	max-height:40px;
+		@include breakpoint(medium) {
+			max-height:80px;
+		}
+	}
+.logo-ticker.splide .splide__slide,
+.dark-ticker.splide .splide__slide {
+	max-width:120px;
+		@include breakpoint(medium) {
+			max-width:200px;
+		}
+	}
+.logo-ticker.splide .splide__slide.is-visible {}
+.logo-ticker.splide,
+.dark-ticker.splide {margin-top:50px;}
+.logo-ticker.splide .splide__list,
+.dark-ticker.splide .splide__list {
+	@include flex-align (null, middle);
+	}
+.logo-ticker.splide .splide__arrow,
+.dark-ticker.splide .splide__arrow {
+	position:absolute;
+	cursor:pointer;
+	text-indent:-9999px;
+	top:0;
+    width: 40px;
+    height: 100%;	
+	z-index:9;	
+	}
+.logo-ticker.splide .splide__arrow.splide__arrow--next,
+.dark-ticker.splide .splide__arrow.splide__arrow--next {right:-40px;}
+.logo-ticker.splide .splide__arrow.splide__arrow--next {
+	background: url("../assets/images/right.svg") no-repeat 0 0;
+	background-position:50% 50%;
+	background-size:18px;
+	}
+.dark-ticker.splide .splide__arrow.splide__arrow--next {
+	background: url("../assets/images/right-white.svg") no-repeat 0 0;
+	background-position:50% 50%;
+	background-size:18px;
+	}
+.logo-ticker.splide .splide__arrow.splide__arrow--prev,
+.dark-ticker.splide .splide__arrow.splide__arrow--prev {left:-40px;}
+.logo-ticker.splide .splide__arrow.splide__arrow--prev {
+	background: url("../assets/images/left.svg") no-repeat 0 0;
+	background-position:50% 50%;
+	background-size:18px;
+	}
+.dark-ticker.splide .splide__arrow.splide__arrow--prev {
+	background: url("../assets/images/left-white.svg") no-repeat 0 0;
+	background-position:50% 50%;
+	background-size:18px;
+	}
+.logo-array-grid {
+	@include flex;
+	@include flex-align (center, middle);
+	padding:30px 0 0;
+	}
+.padded-wrap.logo-2 p {
+	font-size:32px;
+	letter-spacing:1px;
+}
+.offset-gallery .splide__arrow--prev {display:none;}
+.offset-gallery.splide .splide__arrow {
+	position:absolute;
+	cursor:pointer;
+	text-indent:-9999px;
+	top:0;
+    width: 70px;
+    height: 100%;	
+	z-index:9;	
+	}
+.splide__slide {opacity:.3;}
+.splide__slide.is-visible {opacity:1;}
+.offset-gallery.splide .splide__arrow.splide__arrow--next {
+	left:-32px;
+	background: url("../assets/images/arrow_circle.svg") no-repeat 0 0;
+	background-position:50% 50%;
+	background-size:contain;
+	}

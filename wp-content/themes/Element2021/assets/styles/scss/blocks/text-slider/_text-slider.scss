@@ -1,0 +1,64 @@
+.text-slider.splide {
+	@include limit-medium;
+	padding:50px 0;
+	}
+.text-slider .splide__list {
+	@include flex-align(null, middle)
+	}
+.textslider-entry {
+	padding:20px 50px;
+	text-align:center;
+	color:$brand-orange;
+	height:fit-content;
+	}
+.textslider-entry blockquote {border-left:0;}
+.text-slider.splide .splide__arrow {
+	position:absolute;
+	cursor:pointer;
+	text-indent:-9999px;
+	top:0;
+    width: 40px;
+    height: 100%;	
+	z-index:9;	
+	}
+.text-slider.splide .splide__arrow.splide__arrow--next {
+	right:-40px;
+	background: url("../assets/images/right.svg") no-repeat 0 0;
+	background-position:50% 50%;
+	background-size:18px;
+	}
+.text-slider.splide .splide__arrow.splide__arrow--prev {
+	background: url("../assets/images/left.svg") no-repeat 0 0;
+	background-position:50% 50%;
+	background-size:18px;
+	left:-40px;
+	}
+.text-slider.splide p,
+.text-slider.splide h6 {
+	max-width:900px;
+	}
+.text-slider.splide p {
+	font-size:36px;
+	line-height:120%;
+	font-weight:700;
+	margin:0 auto 20px;
+	}
+.text-slider.splide h6 {
+	font-size:17px;
+	text-transform:none;
+	margin:0 auto;
+	font-weight:300;
+	}
+.text-slider.splide .splide__pagination {display:none;}
+.text-slider.splide .splide__pagination:first-of-type {
+	@include flex;
+	margin:20px 0 0;
+	}
+.text-slider.splide .splide__pagination li {margin:0 5px;}
+.text-slider.splide .splide__pagination li button {
+	width:8px;
+	height:8px;
+	border-radius:50%;
+	background:#939393;
+	}
+.text-slider.splide .splide__pagination li button.is-active {background:$brand-orange;}

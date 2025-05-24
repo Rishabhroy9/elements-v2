@@ -1,0 +1,11 @@
+//Blocks
+@import "blocks/blocks";
+
+
+
+body.blog{
+    #news-masonry{
+        article:nth-child(n+8){
+        }
+    }
+}

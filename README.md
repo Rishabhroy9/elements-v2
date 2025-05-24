@@ -9,7 +9,7 @@ This theme requires the following resources to be installed on your local machin
 **NPM:** v10.5.0 or compatible
 
 ### Additional Resources
-
+dg
 **NVM:** v1.1.12 (Used to switch between different Node versions on your machine, if necessary
 
 ## Commands
