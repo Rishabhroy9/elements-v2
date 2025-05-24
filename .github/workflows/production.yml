@@ -1,0 +1,35 @@
+name: Deploy to WP Engine - PRODUCTION
+on:
+  push:
+    branches:
+     - production
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+        check-latest: true
+    - name: Install NPM dependencies
+      working-directory: ./wp-content/themes/Element2021
+      run: npm install
+    - name: Compile assets for production
+      working-directory: ./wp-content/themes/Element2021
+      run: | 
+        npm run build
+    - name: GitHub Action Deploy to WP Engine
+      uses: wpengine/github-action-wpe-site-deploy@v3
+      with:
+      # Deploy vars
+        WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
+        WPE_ENV: elementboston
+        # Deploy Options
+        SRC_PATH: "wp-content/themes/Element2021/"
+        REMOTE_PATH: "wp-content/themes/Element2021/"
+        PHP_LINT: TRUE
+        FLAGS: -azvr --inplace --delete --exclude=".*"  --exclude=wp-content/mu-plugins/local-plugin --exclude-from=.github/wpe-git-exclude.txt
+        CACHE_CLEAR: TRUE
